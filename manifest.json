@@ -1,0 +1,21 @@
+{
+  "name": "Love Quiz",
+  "short_name": "LoveQuiz",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff0f3",
+  "theme_color": "#ff4b6e",
+  "description": "Discover if your love meets the Divine Conditions.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2589/2589175.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2589/2589175.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

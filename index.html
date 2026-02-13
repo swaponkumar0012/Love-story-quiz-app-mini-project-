@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Story Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Love Story Quiz <span class="heart-icon">❤️</span></h1>
+            <p>Discover if your love meets the Divine Conditions.</p>
+        </header>
+
+        <main>
+            <form id="loveForm">
+                <div class="input-group">
+                    <label for="maleName">Male Name</label>
+                    <input type="text" id="maleName" placeholder="Enter name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="femaleName">Female Name</label>
+                    <input type="text" id="femaleName" placeholder="Enter name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="loveOption">Love Option</label>
+                    <select id="loveOption" required>
+                        <option value="" disabled selected>Select relationship...</option>
+                        <option value="friendship">Friendship</option>
+                        <option value="dating">Dating</option>
+                        <option value="engaged">Engaged</option>
+                        <option value="married">Married</option>
+                        <option value="soulmates">Soulmates</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="reason">Why do you love her?</label>
+                    <p class="hint">Express your personal reason. It will be compared with the Divine Conditions.</p>
+                    <textarea id="reason" rows="4" placeholder="I love her because..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Check Compatibility</button>
+            </form>
+
+            <div id="result" class="result-container hidden">
+                <div id="resultContent"></div>
+                <button id="resetBtn" class="secondary-btn">Try Again</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with Love</p>
+        </footer>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
